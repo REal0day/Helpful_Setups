@@ -1,0 +1,27 @@
+BladeRF Micro Linux Set up
+Resources:
+Helpful video: Kali Linux video
+Helpful walkthrough: https://githib.com/REal)day/notes/blob/master/bladeRF
+Helpful instructions: https://github.com/Nuand/bladeRF/wiki/FPGA-Autoloading
+
+1 – This is following the implementation within the Kali Linux set up video. You’re going to install the git files: sudo git clone –recursive https://www.githib.com/Nuand/bladeRF
+2 – When you have the github files within your system, navigate to them. 
+3- Once within the githib bladeRF directory, make sure you locate the CMakelists.txt file.
+4 – If you don’t have CMake installed, do so with: sudo apt-get install cmake
+5 – Next input: make -j4
+*The -j4 is to speed up the compilation process
+6 – Next input: make install
+5 – Next input: sudo ldconfig
+6 – At this point, if you plug in the BladeRF, the device should be discoverable. Input: bladeRF-cli -i
+*This will enable interactive mode.
+7 – While in interactive mode, input: version
+* This will display the firmware and FGPA versions within the BladeRF. Currently, the firmware should show up, but the FPGA should be empty. 
+8 – Do download the proper FPGA file(s), look on the back of your BladeRF. There should be a sticker on the back displaying: A4, A115, ect. This corresponds to the FPGA type for this BladeRF.
+9 – Once you have your sticker information, navigate to: https://www.nuand.com/fgpa_images/
+10 – My implementation followed: Place the FGPA file on the desktop
+11 – Within a terminal window, navigate to the Desktop
+12 – Within the terminal window, input: bladeRF -l (FGPA file name)
+*Disregard the braces. Simply input the FGPA file name
+13 – At this point, if the instillation is performed correctly, you can navigate back to interactive mode by inputting: bladeRF-cli -i
+14 – To verify that everything is complete, input: version 
+15 – If done correctly, both the firmware and FGPA should have something displayed.
