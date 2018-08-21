@@ -1,8 +1,10 @@
 BladeRF Micro Linux Set up
 Resources:
-Helpful video: Kali Linux video
-Helpful walkthrough: https://githib.com/REal)day/notes/blob/master/bladeRF
+Helpful video: Kali Linux video -> https://www.youtube.com/watch?v=6Dtp06-uI38&t=510s
+Helpful walkthrough: https://github.com/REal0day/notes/blob/master/bladeRF
 Helpful instructions: https://github.com/Nuand/bladeRF/wiki/FPGA-Autoloading
+
+*Make sure to have a RPI3 installed with the latest version of Raspbian
 
 1 – This is following the implementation within the Kali Linux set up video. You’re going to install the git files: sudo git clone –recursive https://www.githib.com/Nuand/bladeRF
 2 – When you have the github files within your system, navigate to them. 
@@ -17,6 +19,14 @@ Helpful instructions: https://github.com/Nuand/bladeRF/wiki/FPGA-Autoloading
 7 – While in interactive mode, input: version
 * This will display the firmware and FGPA versions within the BladeRF. Currently, the firmware should show up, but the FPGA should be empty. 
 8 – Do download the proper FPGA file(s), look on the back of your BladeRF. There should be a sticker on the back displaying: A4, A115, ect. This corresponds to the FPGA type for this BladeRF.
+Grab the latest version FPGA image for your device.
+
+On the back of you device, you can see one of the following:
+ BladeRF A4
+ BladeRF A9
+ BladeRF x40
+ BladeRF x115
+
 9 – Once you have your sticker information, navigate to: https://www.nuand.com/fgpa_images/
 10 – My implementation followed: Place the FGPA file on the desktop
 11 – Within a terminal window, navigate to the Desktop
