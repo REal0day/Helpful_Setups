@@ -6,15 +6,19 @@ Helpful instructions: https://github.com/Nuand/bladeRF/wiki/FPGA-Autoloading
 
 *Make sure to have a RPI3 installed with the latest version of Raspbian
 
-1 – This is following the implementation within the Kali Linux set up video. You’re going to install the git files: sudo git clone –recursive https://www.githib.com/Nuand/bladeRF
+1 – This is following the implementation within the Kali Linux set up video. You’re going to install the git files: 
+
+sudo git clone –-recursive https://www.github.com/Nuand/bladeRF
+
 2 – When you have the github files within your system, navigate to them. 
 3- Once within the githib bladeRF directory, make sure you locate the CMakelists.txt file.
 4 – If you don’t have CMake installed, do so with: sudo apt-get install cmake
-5 – Next input: make -j4
-*The -j4 is to speed up the compilation process
-6 – Next input: make install
-5 – Next input: sudo ldconfig
-6 – At this point, if you plug in the BladeRF, the device should be discoverable. Input: bladeRF-cli -i
+5 – Next input: 
+make -j4n # The -j4 is to speed up the compilation process
+make install
+sudo ldconfig
+6 – At this point, if you plug in the BladeRF, the device should be discoverable.  
+bladeRF-cli -i
 *This will enable interactive mode.
 7 – While in interactive mode, input: version
 * This will display the firmware and FGPA versions within the BladeRF. Currently, the firmware should show up, but the FPGA should be empty. 
